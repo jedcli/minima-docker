@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  minima:
+    image: minima-test5:latest
+    command: -port 9001 -rpcenable -rpc 9002 -data /opt/minima
+    restart: always
+    ports:
+      - "9001:9001"
+      - "9002:9002"
+    volumes:
+      - type: volume
+        source: minima-storage
+        target: /opt/minima
+
+volumes:
+  minima-storage:
+ 
