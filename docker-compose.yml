@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   minima:
-    image: minima-test5:latest
+    image: doublecup/minima:latest
     command: -port 9001 -rpcenable -rpc 9002 -data /opt/minima
     restart: always
     ports:
